@@ -7,6 +7,7 @@ import NotFound from "../NotFound"
 import SignIn from "../SignIn"
 import MyOrders from '../MyOrders'
 import Navbar from '../../Components/Navbar'
+import CheckoutSideMenu from '../../Components/CheckoutSideMenu'
 import "./App.css";
 
 
@@ -16,6 +17,7 @@ const AppRoutes = () => {
     { path: "/my-account", element: <MyAccount /> },
     { path: "/my-Order", element: <MyOrder /> },
     { path: "/my-Orders", element: <MyOrders /> },
+    { path: "/my-orders/last", element: <MyOrder /> },
     { path: "/*", element: <NotFound /> },
     { path: "/sign-in", element: <SignIn /> },
   ]);
@@ -28,6 +30,8 @@ const App = ()=> {
      <BrowserRouter>
         <AppRoutes />
         <Navbar />
+        <CheckoutSideMenu />
+        {/* <ProductDetail /> */}
       </BrowserRouter>
   </ShoppingCartProvider> 
   );
