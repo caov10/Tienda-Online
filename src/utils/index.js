@@ -1,16 +1,10 @@
-// This file contains utility functions for the application
-// Function to format a number to two decimal places
-
 /**
- * @param {Array}products - Array of product objects
- * @returns {number} - The total price of all products in the array
- * 
- **/
-
-
-
+ * This function calculates total price of a new order
+ * @param {Array} products cartProduct: Array of Objects
+ * @returns {number} Total price
+ */
 export const totalPrice = (products) => {
-       let sum=0;
-       products.forEach(product => sum += product.price);
-          return sum;
-          }
+  let sum = 0;
+  products.forEach((product) => (sum += product.price));
+  return sum;
+};
